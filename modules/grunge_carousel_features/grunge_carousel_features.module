@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Grunge carousel features feature.
+ */
+
+include_once('grunge_carousel_features.features.inc');
