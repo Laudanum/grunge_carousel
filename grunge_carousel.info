@@ -1,0 +1,11 @@
+core = "7.x"
+dependencies[] = "image"
+dependencies[] = "jcarousel"
+dependencies[] = "views"
+
+description = "Carousel slideshow for Grunge theme"
+
+
+name = "Grunge carousel theme"
+project = "grunge_carousel"
+version = "7.x-0.1"

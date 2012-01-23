@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_jcarousel_skin_info().
+ */
+function grunge_carousel_jcarousel_skin_info() {
+  $skins = array();
+  
+  $skins['Grunge'] = array(
+    'title' => t('Grunge'),
+    'file' => 'jcarousel/skins/grunge/jcarousel-grunge.css',
+  );
+
+  return $skins;
+}
+
+?>

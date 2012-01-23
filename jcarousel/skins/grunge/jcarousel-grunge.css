@@ -1,0 +1,125 @@
+
+/**
+ * Radius skin built based on default (from module)
+ */
+
+.jcarousel-skin-radius {
+  text-align: center;
+}
+
+body.node-type-news .jcarousel-skin-radius,
+body.node-type-page .jcarousel-skin-radius {
+  margin-left: -3px;
+}
+
+.jcarousel-skin-radius .jcarousel-container-horizontal {
+  width: 500px;
+  height: 281px;
+  padding: 0px;
+  margin: 0px;
+}
+
+body.front .jcarousel-skin-radius .jcarousel-container-horizontal {
+  width: 940px;
+}
+
+.jcarousel-skin-radius .jcarousel-clip-horizontal {
+  width: 500px;
+}
+
+body.front .jcarousel-skin-radius .jcarousel-clip-horizontal {
+  width: 940px;
+}
+
+.jcarousel-skin-radius .jcarousel-item {
+  padding: 0;
+  width: 500px;
+  height: 281px;
+  overflow: hidden;
+  list-style: none;
+}
+
+body.front .jcarousel-skin-radius .jcarousel-item {
+  width: 940px;
+}
+
+.jcarousel-skin-radius .jcarousel-item-horizontal {
+  margin:0 0 0 4px;
+}
+
+.jcarousel-skin-radius .jcarousel-item-placeholder {
+  background: #fff url(throbber.gif) no-repeat center center;
+  color: #000;
+}
+
+/**
+ * Buttons
+ */
+.jcarousel-skin-radius .jcarousel-next,
+.jcarousel-skin-radius .jcarousel-prev {
+	background: url(arrow.png) no-repeat 0 0 scroll transparent;
+	display: block;
+	width: 28px;
+	height: 28px;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-radius .jcarousel-prev-horizontal {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  background-position: 0 0;
+}
+body.node-type-news .jcarousel-skin-radius .jcarousel-prev-horizontal {
+  bottom: -64px;
+  top: auto;
+}
+body.page-news .jcarousel-skin-radius .jcarousel-prev-horizontal,
+body.node-type-service .jcarousel-skin-radius .jcarousel-prev-horizontal {
+  bottom: 0px;
+  left: -65px;
+  top: auto;
+}
+.jcarousel-skin-radius .jcarousel-prev-horizontal:hover {
+  background-position: 0 -28px;
+}
+.jcarousel-skin-radius .jcarousel-prev-horizontal:active {
+  background-position: 0 -28px;
+}
+.jcarousel-skin-radius .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-radius .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-radius .jcarousel-prev-disabled-horizontal:active {
+  cursor: default;
+  background-position: 0 -56px;
+}
+
+.jcarousel-skin-radius .jcarousel-next-horizontal {
+  position: absolute;
+  top: 5px;
+  left: 36px;
+  background-position: -28px 0px;
+}
+body.node-type-news .jcarousel-skin-radius .jcarousel-next-horizontal {
+  bottom: -64px;
+  top: auto;
+}
+body.page-news .jcarousel-skin-radius .jcarousel-next-horizontal,
+body.node-type-service .jcarousel-skin-radius .jcarousel-next-horizontal {
+  bottom: 0px;
+  left: -35px;
+  top: auto;
+}
+.jcarousel-skin-radius .jcarousel-next-horizontal:hover {
+  background-position: -28px -28px;
+}
+.jcarousel-skin-radius .jcarousel-next-horizontal:active {
+  background-position: -28px -28px;
+}
+.jcarousel-skin-radius .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-radius .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-radius .jcarousel-next-disabled-horizontal:active {
+  cursor: default;
+  background-position: -28px -56px;
+}
