@@ -30,9 +30,10 @@ function fargher_carousel_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'jcarousel';
-  $handler->display->display_options['style_options']['wrap'] = '0';
+  $handler->display->display_options['style_options']['wrap'] = 'circular';
   $handler->display->display_options['style_options']['skin'] = 'Grunge';
   $handler->display->display_options['style_options']['visible'] = '';
+  $handler->display->display_options['style_options']['scroll'] = '1';
   $handler->display->display_options['style_options']['auto'] = '8';
   $handler->display->display_options['style_options']['autoPause'] = 1;
   $handler->display->display_options['style_options']['animation'] = '600';

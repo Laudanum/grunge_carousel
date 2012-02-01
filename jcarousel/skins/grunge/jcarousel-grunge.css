@@ -95,6 +95,8 @@ body.front .jcarousel-skin-Grunge .jcarousel-clip-horizontal {
 .jcarousel-skin-Grunge .jcarousel-item .views-field-body {
   width : 470px;
   margin-left : 430px;
+  font-size: 14px;
+  color: white;
 }
 .jcarousel-skin-Grunge .jcarousel-item .views-field-title a {
   color : #FF9A05;
