@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Fargher carousel feature.
+ */
+
+include_once('fargher_carousel.features.inc');

@@ -2,7 +2,7 @@ core = "7.x"
 dependencies[] = "image"
 dependencies[] = "jcarousel"
 dependencies[] = "views"
-dependencies[] = "grunge_carousel_features"
+;dependencies[] = "grunge_carousel_features"
 
 description = "Carousel slideshow for Grunge theme"
 
