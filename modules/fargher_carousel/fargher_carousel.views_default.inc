@@ -167,5 +167,109 @@ function fargher_carousel_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $export['front_page_carousel'] = $view;
 
+  $view = new view;
+  $view->name = 'project_media_viewer';
+  $view->description = 'Using jCarousel (not Views Slideshow jCarousel)';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Project media viewer';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Project media viewer';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '99';
+  $handler->display->display_options['style_plugin'] = 'jcarousel';
+  $handler->display->display_options['style_options']['wrap'] = 'both';
+  $handler->display->display_options['style_options']['skin'] = 'Grunge';
+  $handler->display->display_options['style_options']['visible'] = '2';
+  $handler->display->display_options['style_options']['auto'] = '5';
+  $handler->display->display_options['style_options']['autoPause'] = 1;
+  $handler->display->display_options['style_options']['animation'] = 'slow';
+  $handler->display->display_options['style_options']['easing'] = '';
+  $handler->display->display_options['style_options']['vertical'] = 0;
+  $handler->display->display_options['style_options']['navigation'] = 'after';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = 0;
+  $handler->display->display_options['row_options']['default_field_elements'] = 1;
+  /* Field: Content: Media */
+  $handler->display->display_options['fields']['field_media']['id'] = 'field_media';
+  $handler->display->display_options['fields']['field_media']['table'] = 'field_data_field_media';
+  $handler->display->display_options['fields']['field_media']['field'] = 'field_media';
+  $handler->display->display_options['fields']['field_media']['label'] = '';
+  $handler->display->display_options['fields']['field_media']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_media']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_media']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_media']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_media']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_media']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_media']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_media']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_media']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_media']['type'] = 'media';
+  $handler->display->display_options['fields']['field_media']['settings'] = array(
+    'file_view_mode' => 'media_preview',
+  );
+  $handler->display->display_options['fields']['field_media']['group_rows'] = 0;
+  $handler->display->display_options['fields']['field_media']['delta_limit'] = '5';
+  $handler->display->display_options['fields']['field_media']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_media']['delta_reversed'] = 0;
+  $handler->display->display_options['fields']['field_media']['delta_first_last'] = 0;
+  $handler->display->display_options['fields']['field_media']['multi_type'] = 'ul';
+  $handler->display->display_options['fields']['field_media']['field_api_classes'] = 0;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['nid']['not'] = 0;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'project' => 'project',
+  );
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['block_caching'] = '-1';
+  $export['project_media_viewer'] = $view;
+
   return $export;
 }
