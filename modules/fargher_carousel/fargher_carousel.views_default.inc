@@ -191,7 +191,7 @@ function fargher_carousel_views_default_views() {
   $handler->display->display_options['style_options']['wrap'] = 'circular';
   $handler->display->display_options['style_options']['skin'] = 'Grunge';
   $handler->display->display_options['style_options']['visible'] = '2';
-  $handler->display->display_options['style_options']['auto'] = '5';
+  $handler->display->display_options['style_options']['auto'] = '0';
   $handler->display->display_options['style_options']['autoPause'] = 1;
   $handler->display->display_options['style_options']['animation'] = 'slow';
   $handler->display->display_options['style_options']['easing'] = '';

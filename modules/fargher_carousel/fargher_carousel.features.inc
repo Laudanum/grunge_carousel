@@ -48,7 +48,7 @@ function fargher_carousel_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
-          'width' => '940',
+          'width' => '900',
           'height' => '',
           'upscale' => 0,
         ),
@@ -64,7 +64,7 @@ function fargher_carousel_image_default_styles() {
         'module' => 'image',
         'name' => 'image_crop',
         'data' => array(
-          'width' => '940',
+          'width' => '900',
           'height' => '290',
           'anchor' => 'center-center',
         ),
@@ -88,7 +88,7 @@ function fargher_carousel_image_default_styles() {
         'name' => 'image_scale',
         'data' => array(
           'width' => '',
-          'height' => '290',
+          'height' => '250',
           'upscale' => 0,
         ),
         'weight' => '1',
@@ -103,8 +103,8 @@ function fargher_carousel_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => '470',
-          'height' => '290',
+          'width' => '440',
+          'height' => '250',
         ),
         'weight' => '2',
       ),
