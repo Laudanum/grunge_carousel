@@ -168,25 +168,25 @@ function fargher_carousel_views_default_views() {
   $export['front_page_carousel'] = $view;
 
   $view = new view;
-  $view->name = 'project_media_viewer';
-  $view->description = 'Using jCarousel (not Views Slideshow jCarousel)';
+  $view->name = 'project_media_carousel';
+  $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Project media viewer';
+  $view->human_name = 'Project media carousel';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Project media viewer';
+  $handler->display->display_options['title'] = 'Project media carousel';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '99';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '999';
   $handler->display->display_options['style_plugin'] = 'jcarousel';
   $handler->display->display_options['style_options']['wrap'] = 'circular';
   $handler->display->display_options['style_options']['skin'] = 'Grunge';
@@ -194,12 +194,10 @@ function fargher_carousel_views_default_views() {
   $handler->display->display_options['style_options']['auto'] = '0';
   $handler->display->display_options['style_options']['autoPause'] = 1;
   $handler->display->display_options['style_options']['animation'] = 'slow';
-  $handler->display->display_options['style_options']['easing'] = '';
+  $handler->display->display_options['style_options']['easing'] = 'swing';
   $handler->display->display_options['style_options']['vertical'] = 0;
   $handler->display->display_options['style_options']['navigation'] = 'before';
   $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['hide_empty'] = 0;
-  $handler->display->display_options['row_options']['default_field_elements'] = 1;
   /* Field: Content: Media */
   $handler->display->display_options['fields']['field_media']['id'] = 'field_media';
   $handler->display->display_options['fields']['field_media']['table'] = 'field_data_field_media';
@@ -214,6 +212,7 @@ function fargher_carousel_views_default_views() {
   $handler->display->display_options['fields']['field_media']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['field_media']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['field_media']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_media']['alter']['more_link'] = 0;
   $handler->display->display_options['fields']['field_media']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_media']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_media']['alter']['html'] = 0;
@@ -223,16 +222,14 @@ function fargher_carousel_views_default_views() {
   $handler->display->display_options['fields']['field_media']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_media']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_media']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_media']['type'] = 'media';
+  $handler->display->display_options['fields']['field_media']['type'] = 'file_rendered';
   $handler->display->display_options['fields']['field_media']['settings'] = array(
     'file_view_mode' => 'media_preview',
   );
   $handler->display->display_options['fields']['field_media']['group_rows'] = 0;
-  $handler->display->display_options['fields']['field_media']['delta_limit'] = '5';
   $handler->display->display_options['fields']['field_media']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_media']['delta_reversed'] = 0;
   $handler->display->display_options['fields']['field_media']['delta_first_last'] = 0;
-  $handler->display->display_options['fields']['field_media']['multi_type'] = 'ul';
   $handler->display->display_options['fields']['field_media']['field_api_classes'] = 0;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
@@ -268,8 +265,7 @@ function fargher_carousel_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['block_caching'] = '-1';
-  $export['project_media_viewer'] = $view;
+  $export['project_media_carousel'] = $view;
 
   return $export;
 }
