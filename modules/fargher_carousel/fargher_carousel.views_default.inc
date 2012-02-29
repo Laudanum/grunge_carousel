@@ -188,7 +188,7 @@ function fargher_carousel_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '99';
   $handler->display->display_options['style_plugin'] = 'jcarousel';
-  $handler->display->display_options['style_options']['wrap'] = 'both';
+  $handler->display->display_options['style_options']['wrap'] = 'circular';
   $handler->display->display_options['style_options']['skin'] = 'Grunge';
   $handler->display->display_options['style_options']['visible'] = '2';
   $handler->display->display_options['style_options']['auto'] = '5';
@@ -196,7 +196,7 @@ function fargher_carousel_views_default_views() {
   $handler->display->display_options['style_options']['animation'] = 'slow';
   $handler->display->display_options['style_options']['easing'] = '';
   $handler->display->display_options['style_options']['vertical'] = 0;
-  $handler->display->display_options['style_options']['navigation'] = 'after';
+  $handler->display->display_options['style_options']['navigation'] = 'before';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = 0;
   $handler->display->display_options['row_options']['default_field_elements'] = 1;
